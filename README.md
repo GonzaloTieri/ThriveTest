@@ -23,5 +23,8 @@ $ docker exec -it [THE NAME OF THE COMPONENT WITH myapp ]  php artisan key:gener
 
 ### Go your browser http://127.0.0.1:3000/
 
+## Run Test
+$ docker exec -it [THE NAME OF THE COMPONENT WITH myapp ]  php artisan test </br>
+
 
 

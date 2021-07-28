@@ -14,14 +14,14 @@ class ExampleTest extends TestCase
      *
      * @return void
      */
-    public function index_text()
+    public function test_index()
     {
         $response = $this->get('/');
 
         $response->assertStatus(200);
     }
 
-    public function saveUserProducts()
+    public function test_saveUserProducts()
     {
         $request = Request::create('/store', 'POST',[
             'user_id'       => 1,
@@ -31,7 +31,7 @@ class ExampleTest extends TestCase
         $controller = new UserProductsController();
         $resp =  $controller->store($request);
 
-        $resp->assert(true,$resp);
+        $this->assertTrue($resp);
         
     }
 }
